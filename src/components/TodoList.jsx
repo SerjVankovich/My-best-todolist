@@ -9,7 +9,12 @@ const TodoList = ({ items, deleteItem, editItem }) => {
       <Col lg={6} md={6} sm={6} xs={12}>
         <CardColumns>
           {items.map((item, key) => (
-            <TodoItem editItem={editItem} deleteItem={deleteItem} item={item} key={key} />
+            <TodoItem
+              editItem={editItem}
+              deleteItem={deleteItem}
+              item={item}
+              key={key}
+            />
           ))}
         </CardColumns>
       </Col>

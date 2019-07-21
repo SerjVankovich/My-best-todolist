@@ -8,15 +8,15 @@ const ColorPicker = ({ pick, colors }) => {
   };
   return (
     <Row>
-        {htmlColors.map((color, i) => (
-            <Col key={i}>
-            <div
-              style={{ background: color, border: checkPicked(i) }}
-              onClick={() => pick(i)}
-              className="custom-checkbox"
-            />
-          </Col>
-        ))}
+      {htmlColors.map((color, i) => (
+        <Col key={i}>
+          <div
+            style={{ background: color, border: checkPicked(i) }}
+            onClick={() => pick(i)}
+            className="custom-checkbox"
+          />
+        </Col>
+      ))}
     </Row>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TodoItem from "../models/TodoItem";
 import { makeID, colors, handleChange } from "../utills/utils";
 import { Form, Button, Card, Row, Col } from "react-bootstrap";
-import dateFormat from 'dateformat'
+import dateFormat from "dateformat";
 import ColorPicker from "./ColorPicker";
 import "../styles/AddItem.css";
 
@@ -26,15 +26,15 @@ const AddItem = ({ addItem }) => {
   };
 
   const findColor = () => {
-      let index = 0
-      _colors.forEach((color, i) => {
-          if (color) {
-              index = i
-          }
-      })
+    let index = 0;
+    _colors.forEach((color, i) => {
+      if (color) {
+        index = i;
+      }
+    });
 
-      return colors[index]
-  }
+    return colors[index];
+  };
 
   const handleSubmit = () => {
     const dateWithTimeExpired = new Date(dateExpired);
@@ -42,7 +42,7 @@ const AddItem = ({ addItem }) => {
     const minutes = timeExpired.split(":")[1];
     dateWithTimeExpired.setHours(hours);
     dateWithTimeExpired.setMinutes(minutes);
-    console.error(findColor())
+    console.error(findColor());
     const item = new TodoItem(
       makeID(),
       title,
@@ -91,7 +91,7 @@ const AddItem = ({ addItem }) => {
                 <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Label>Date Expired</Form.Label>
                   <Form.Control
-                    value={dateFormat(dateExpired, 'yyyy-mm-dd')}
+                    value={dateFormat(dateExpired, "yyyy-mm-dd")}
                     onChange={handleChange(setDateExpired)}
                     type="date"
                   />
@@ -104,10 +104,9 @@ const AddItem = ({ addItem }) => {
                     type="time"
                   />
                 </Form.Group>
-                <div style={{ height: '2.5em'}}>
-                    <ColorPicker colors={_colors} pick={pick} />
+                <div style={{ height: "2.5em" }}>
+                  <ColorPicker colors={_colors} pick={pick} />
                 </div>
-                
               </Form>
             </Card.Body>
             <Card.Footer>

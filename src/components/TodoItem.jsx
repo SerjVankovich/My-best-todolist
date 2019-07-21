@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Card, Row, Col, Alert } from "react-bootstrap";
 import EditItem from "./EditItem";
 import dateFormat from "dateformat";
-import '../styles/TodoItem.css'
+import "../styles/TodoItem.css";
 
 const TodoItem = ({ item, deleteItem, editItem }) => {
   const [modal, switchModal] = useState(false);
