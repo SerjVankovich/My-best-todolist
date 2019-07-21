@@ -1,0 +1,12 @@
+.custom-checkbox {
+    border-radius: 100px;
+    width: 2em;
+    height: 2em;
+    
+}
+
+.custom-checkbox:hover {
+    border-radius: 100px;
+    width: 2.2em;
+    height: 2.2em;
+}
