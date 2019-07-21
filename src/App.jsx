@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   getItems() {
-    return localStorage.getItem("items") !== "null"
+    return localStorage.getItem("items") !== null
       ? JSON.parse(localStorage.getItem("items")).map(
           item =>
             new TodoItem(
